@@ -11,4 +11,4 @@ You can use the exe file as many times as you like by going to the build's direc
 **How This Program Works:**
 1. Enter your grade and then enter the percentage of that grade (ex: if the grade is 10%, then you would enter 10)
 2. When alll grades have been entered, type 00 when asked for your next grade to stop the program
-3. The program will then calculate your weighted average, and then ask if you would like to calculate another average. The program will end if you type no.
+3. The program will then calculate your weighted average, and then ask if you would like to calculate another average. The program will end if you type no
