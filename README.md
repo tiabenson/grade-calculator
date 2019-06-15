@@ -6,6 +6,7 @@ This is a command-line program that can be used to calculate weighted averages f
 1. Download grade c++ file
 2. Open file with your preferred IDE
 3. Build/compile the file
+
 You can use the exe file as many times as you like by going to the build's directory
 
 **How This Program Works:**
