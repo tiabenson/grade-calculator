@@ -7,9 +7,9 @@
 
 void calculate()
 {
-    int num = 1, grade, percentage;
-    float total, p;
-    std::vector<int> grades, percent;
+    int num = 1;
+    float total, p, grade, percentage;
+    std::vector<float> grades, percent;
     
     while(true)
     {
