@@ -1,4 +1,4 @@
-// This is a weighted grade calculator
+// This is a weighted grade and GPA calculator
 // Created by Tia Benson
 
 #include <iostream>
@@ -6,13 +6,13 @@
 #include <iomanip>
 #include <string>
 
-void calculate()
+void calculate()    //calculate weighted grade average
 {
     int num = 1;
     float total, p, grade, percentage;
     std::vector<float> grades, percent;
     
-    while(true)
+    while(1)
     {
         std::cout<<"Enter grade #"<<num<<": ";
         std::cin>>grade;
@@ -36,7 +36,7 @@ void calculate()
         
     }
     
-    for(int i = 0; i < grades.size(); i++) //calculate weighted average
+    for(int i = 0; i < grades.size(); i++) //calculates weighted average
     {
         total += (grades[i]*percent[i]);
         p += percent[i];
@@ -44,7 +44,8 @@ void calculate()
     
     std::cout<<"\nYour average grade is "<<(total/p)<<std::endl;
     
-    if((total/p) >= 90 && (total/p) <= 100) //determine letter grade
+    //determine letter grade
+    if((total/p) >= 90 && (total/p) <= 100)
     {
         std::cout<<"Your letter grade is an A!"<<std::endl;
     }
@@ -65,21 +66,21 @@ void calculate()
     }
 }
 
-void GPA()
+void GPA()  //Calculates GPA
 {
     int num = 1;
     std::string grade;
     int credit;
-    int total = 0, total_credits = 0;
+    double total = 0.00, total_credits = 0.00;
     std::vector<std::string> letters;
     std::vector<int> credits;
     
-    while(true)
+    while(1)
     {
         std::cout<<"Enter grade letter of class #"<<num<<": ";
         std::cin>>grade;
         
-        if(grade == (std::to_string(00))) //stop taking grades if 00 is typed
+        if(grade == "done" || grade == "Done") //stop taking input for GPA if "done" is typed
         {
             break;
         }
@@ -97,42 +98,43 @@ void GPA()
         std::cout<<"\n";
     }
     
-    for(int i = 0; i < credits.size(); i++)
+    //Calculate GPA
+    for(int i = 0; i < letters.size(); i++)
     {
-        if(letters[i] == "A" || letters[i] == "a")
+        if(letters[i] == "A" || letters[i] == "a")  //A = 4 points
         {
-            total += 4 * credits[i];
+            total += (4 * credits[i]);
             total_credits += credits[i];
         }
-        
-        else if(letters[i] == "B" || letters[i] == "b")
+
+        else if(letters[i] == "B" || letters[i] == "b") //B = 3 points
         {
-            total += 3 * credits[i];
+            total += (3 * credits[i]);
             total_credits += credits[i];
         }
-        
-        else if(letters[i] == "C" || letters[i] == "c")
+
+        else if(letters[i] == "C" || letters[i] == "c") //C = 2 points
         {
-            total += 2 * credits[i];
+            total += (2 * credits[i]);
             total_credits += credits[i];
         }
-        
-        else if(letters[i] == "D" || letters[i] == "d")
+
+        else if(letters[i] == "D" || letters[i] == "d") //D = 1 point
         {
-            total += 1 * credits[i];
+            total += (1 * credits[i]);
             total_credits += credits[i];
         }
-        
-        else    //assume the user typed a failing grade letter
+
+        else    //assume the user typed a failing grade letter (0 points)
         {
-            total += 0 * credits[i];
+            total += (0 * credits[i]);
             total_credits += credits[i];
         }
     }
     
-    float gpa = total/total_credits;
+    double gpa = total/total_credits;
     
-    std::cout<<"Your GPA is "<<gpa<<std::endl;
+    std::cout<<"\nYour GPA is "<<std::setprecision(2)<<std::fixed<<gpa<<std::endl;
  
 }
 
@@ -152,7 +154,7 @@ int main(int argc, char ** argv)
         std::cin>>option;
         std::string ans;
         
-        if(option == 1)
+        if(option == 1) //weighted grade
         {
             while(1)
             {
@@ -174,7 +176,7 @@ int main(int argc, char ** argv)
             }
         }
         
-        else if(option == 2)
+        else if(option == 2)    //GPA
         {
             while(1)
             {
@@ -196,13 +198,13 @@ int main(int argc, char ** argv)
             }
         }
         
-        else if(option == 3)
+        else if(option == 3)    //quit program
         {
             std::cout<<"\n***Thank you for using the grade calculator!***\n\n";
             exit(0);
         }
         
-        else
+        else    //error check invalid input
         {
             std::cout<<"Option not recognized. Please try again."<<std::endl;
             continue;
