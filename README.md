@@ -16,6 +16,6 @@ You can use the .exe file as many times as you would like by going to the build'
 
 **SAMPLE RUN OF PROGRAM**
 
-![](Images/ScreenShot1.png)
-![](Images/ScreenShot2.png)
-
+![](Images/ScreenShot 1)
+![](Images/ScreenShot 2)
+![](Images/ScreenShot 3)
