@@ -1,21 +1,22 @@
 # grade-calculator
 
-This is a command-line program that can be used to calculate weighted averages for your school classes.
+This is a command-line program that can be used to calculate weighted averages and GPA for your school classes.
 
 **INSTALLATION GUIDE** (has been tested on Windows and Mac):
-1. Download grade c++ file
+1. Download grade.cpp file
 2. Open file with your preferred IDE
 3. Build/compile the file
 
 You can use the .exe file as many times as you would like by going to the build's directory
 
-**How This Program Works:**
-1. Enter your grade and then enter the percentage of that grade (ex: if the grade is 10%, then you would enter 10)
-2. When all grades have been entered, type 00 when asked for your next grade to stop the program
-3. The program will then calculate your weighted average, and then ask if you would like to calculate another average. The program will end if you type no.
+--Can also compile with `g++ grade.cpp` via command line
+
+**Important Details:**
+1. Type `00` to stop entering grades when calculating weighted average
+2. Type `done` to stop entering letter grades when calculating GPA
 
 **SAMPLE RUN OF PROGRAM**
 
-![](Images/ScreenShot 1)
-![](Images/ScreenShot 2)
-![](Images/ScreenShot 3)
+![](Images/ScreenShot%201.png)
+![](Images/ScreenShot%202.png)
+![](Images/ScreenShot%203.png)
