@@ -3,7 +3,7 @@
 This is a command-line program that can be used to calculate weighted averages and unweighted GPA for your school classes.
 
 ## Contributions
-If anyone would like to contribute with making this calculator a GUI application, feel free to fork this repo and make a pull request.
+If anyone would like to contribute with making this calculator a GUI application, feel free to fork/clone this repo and make a pull request.
 
 ## Installation Guide (has been tested on Windows and Mac):
 1. Download grade.cpp file
