@@ -1,6 +1,6 @@
 # grade-calculator
 
-This is a command-line program that can be used to calculate weighted averages and GPA for your school classes.
+This is a command-line program that can be used to calculate weighted averages and unweighted GPA for your school classes.
 
 **INSTALLATION GUIDE** (has been tested on Windows and Mac):
 1. Download grade.cpp file
